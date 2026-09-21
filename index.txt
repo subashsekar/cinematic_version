@@ -1,0 +1,18 @@
+2:I[5935,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"LoveRainSection"]
+3:I[8484,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Intro"]
+4:I[9945,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Hero"]
+5:I[8591,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Story"]
+6:I[5525,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Memories"]
+7:I[1746,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Gallery"]
+8:I[2532,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Message"]
+9:I[8133,["689","static/chunks/b536a0f1-523e97e5af8fede2.js","402","static/chunks/402-a8a775ef5aae83ad.js","931","static/chunks/app/page-543db97cdab5ac8b.js"],"Final"]
+a:I[1398,["185","static/chunks/app/layout-b2f68902d0098b06.js"],"MouseInteractionProvider"]
+b:I[6424,["185","static/chunks/app/layout-b2f68902d0098b06.js"],"AudioProvider"]
+c:I[3058,["185","static/chunks/app/layout-b2f68902d0098b06.js"],"SmoothScrollProvider"]
+d:I[8107,["185","static/chunks/app/layout-b2f68902d0098b06.js"],"Navigation"]
+e:"$Sreact.suspense"
+f:I[9275,[],""]
+10:I[1343,[],""]
+0:["wJ8OPeuITgkVRKj6VuPFR",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"relative min-h-screen","children":[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}]]}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/cinematic_version/_next/static/css/b7eab06582a913a7.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_19b975","children":["$","$La",null,{"children":["$","$Lb",null,{"children":["$","$Lc",null,{"children":[["$","$Ld",null,{}],["$","$e",null,{"children":["$","$Lf",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L10",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"flex min-h-screen items-center justify-center bg-slate-950 px-6 text-center text-white","children":["$","div",null,{"children":[["$","h1",null,{"className":"font-serif text-4xl","children":"Page not found"}],["$","a",null,{"href":"./","className":"mt-6 inline-block text-romantic-400 underline","children":"Back home"}]]}]}],"notFoundStyles":[]}]}]]}]}]}]}]}]],null],null],["$L11",null]]]]
+11:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"For You - Our Cinematic Love Story"}],["$","meta","3",{"name":"description","content":"An interactive cinematic love story made exclusively for you"}],["$","link","4",{"rel":"icon","href":"♡"}],["$","meta","5",{"name":"next-size-adjust"}]]
+1:null

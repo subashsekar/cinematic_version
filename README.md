@@ -11,10 +11,12 @@ After you enable Pages (one-time), the site will be at:
 ### Enable GitHub Pages (required once)
 
 1. Open [Repository Settings → Pages](https://github.com/subashsekar/cinematic_version/settings/pages)
-2. Under **Build and deployment → Source**, choose **GitHub Actions**
-3. Wait for the **Deploy to GitHub Pages** workflow to finish (Actions tab)
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Branch: **`gh-pages`** / folder: **`/ (root)`** → Save
+4. Wait 1–2 minutes, then open:
+   **https://subashsekar.github.io/cinematic_version/**
 
-Every push to `main` rebuilds and publishes automatically.
+Every push to `main` rebuilds and updates the site automatically.
 
 ## Features
 

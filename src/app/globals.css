@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+  :root {
+    --background: 15 10 26;
+    --foreground: 255 255 255;
+    --romantic-pink: 235 52 153;
+    --midnight-blue: 15 23 42;
+    --violet-glow: 139 92 246;
+    --gold-highlight: 251 191 36;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-[rgb(var(--background))] to-[rgb(var(--midnight-blue))] text-[rgb(var(--foreground))] antialiased;
+    background-attachment: fixed;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-romantic-500 text-white;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  .glass-card {
+    @apply glass p-8 rounded-2xl;
+  }
+
+  .glass-panel {
+    @apply glass p-6 rounded-xl;
+  }
+
+  .glass-input {
+    @apply glass px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-romantic-500/50;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-romantic-400 via-violet-400 to-gold-300;
+  }
+
+  .glow-text {
+    @apply text-shadow-[0_0_10px_rgba(235,52,153,0.5),0_0_20px_rgba(235,52,153,0.3)];
+  }
+
+  .glow-object {
+    filter: drop-shadow(0 0 10px rgba(235, 52, 153, 0.5)) drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
+  }
+
+  .glass-reflection::after {
+    content: '';
+    @apply absolute inset-0 rounded-2xl pointer-events-none;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee,
+    .animate-marquee-reverse,
+    .animate-float,
+    .animate-heartbeat {
+      animation: none !important;
+    }
+  }
+
+  .theme-light body {
+    --background: 255 247 251;
+    --foreground: 30 20 35;
+    --midnight-blue: 255 235 245;
+    color: rgb(30 20 35);
+  }
+
+  .theme-light section:not(.fixed) > div.absolute.inset-0 {
+    background: linear-gradient(to bottom, rgb(255 247 251), rgb(244 238 255), rgb(255 247 251)) !important;
+  }
+
+  .theme-light .glass,
+  .theme-light .glass-card,
+  .theme-light .glass-panel {
+    background-color: rgb(255 255 255 / 0.72) !important;
+    border-color: rgb(139 92 246 / 0.22) !important;
+  }
+
+  .theme-light .text-white,
+  .theme-light .text-white\/80,
+  .theme-light .text-white\/70,
+  .theme-light .text-white\/60,
+  .theme-light .text-white\/50 {
+    color: rgb(45 32 55) !important;
+  }
+
+  /* The intro must also work before JavaScript has hydrated. */
+  body:has(#hero:target) .intro-overlay {
+    display: none;
+  }
+
+  body:has(#theme-toggle:checked) {
+    --background: 255 247 251;
+    --foreground: 30 20 35;
+    --midnight-blue: 255 235 245;
+    color: rgb(30 20 35);
+  }
+
+  body:has(#theme-toggle:checked) section:not(.fixed) > div.absolute.inset-0 {
+    background: linear-gradient(to bottom, rgb(255 247 251), rgb(244 238 255), rgb(255 247 251)) !important;
+  }
+
+  body:has(#theme-toggle:checked) .glass,
+  body:has(#theme-toggle:checked) .glass-card,
+  body:has(#theme-toggle:checked) .glass-panel {
+    background-color: rgb(255 255 255 / 0.72) !important;
+    border-color: rgb(139 92 246 / 0.22) !important;
+  }
+
+  body:has(#theme-toggle:checked) .text-white,
+  body:has(#theme-toggle:checked) .text-white\/80,
+  body:has(#theme-toggle:checked) .text-white\/70,
+  body:has(#theme-toggle:checked) .text-white\/60,
+  body:has(#theme-toggle:checked) .text-white\/50 {
+    color: rgb(45 32 55) !important;
+  }
+
+  body:has(#theme-toggle:checked) canvas {
+    filter: brightness(1.25) saturate(1.2);
+  }
+
+  body:has(#theme-toggle:checked) canvas + * {
+    color: rgb(30 20 35);
+  }
+}

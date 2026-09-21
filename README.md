@@ -2,6 +2,20 @@
 
 A premium, cinematic, highly interactive romantic website built with Next.js, Three.js, and modern web technologies.
 
+## Live site (GitHub Pages)
+
+After you enable Pages (one-time), the site will be at:
+
+**https://subashsekar.github.io/cinematic_version/**
+
+### Enable GitHub Pages (required once)
+
+1. Open [Repository Settings → Pages](https://github.com/subashsekar/cinematic_version/settings/pages)
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Wait for the **Deploy to GitHub Pages** workflow to finish (Actions tab)
+
+Every push to `main` rebuilds and publishes automatically.
+
 ## Features
 
 - **Immersive 3D Experiences**: Built with Three.js, React Three Fiber, and @react-three/drei

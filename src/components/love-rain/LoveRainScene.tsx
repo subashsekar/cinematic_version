@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, type MutableRefObject } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, type EventManager } from "@react-three/fiber";
 import { FallingNames } from "./FallingNames";
 import { FloatingHearts } from "./FloatingHearts";
 import { BackgroundParticles } from "./BackgroundParticles";
@@ -18,6 +18,26 @@ type LoveRainSceneProps = {
   mouse: MutableRefObject<{ x: number; y: number }>;
   overlay?: boolean;
 };
+
+const createDisabledEvents = (): EventManager<HTMLElement> => ({
+  enabled: false,
+  priority: 0,
+  handlers: {
+    onClick: () => undefined,
+    onContextMenu: () => undefined,
+    onDoubleClick: () => undefined,
+    onWheel: () => undefined,
+    onPointerDown: () => undefined,
+    onPointerUp: () => undefined,
+    onPointerLeave: () => undefined,
+    onPointerMove: () => undefined,
+    onPointerCancel: () => undefined,
+    onLostPointerCapture: () => undefined,
+  },
+  connect: () => undefined,
+  disconnect: () => undefined,
+  update: () => undefined,
+});
 
 export function LoveRainScene({ scrollProgress, mouse, overlay = false }: LoveRainSceneProps) {
   const fallSpeedBoost = useRef(0);
@@ -62,8 +82,7 @@ export function LoveRainScene({ scrollProgress, mouse, overlay = false }: LoveRa
         pointerEvents: "none",
         background: overlay ? "transparent" : undefined,
       }}
-      eventSource={undefined}
-      eventPrefix="client"
+      events={overlay ? createDisabledEvents() : undefined}
     >
       {!overlay && <color attach="background" args={["#050510"]} />}
       {!overlay && <fog attach="fog" args={["#050510", 12, 28]} />}

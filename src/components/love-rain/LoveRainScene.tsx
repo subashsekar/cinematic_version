@@ -82,7 +82,7 @@ export function LoveRainScene({ scrollProgress, mouse, overlay = false }: LoveRa
         pointerEvents: "none",
         background: overlay ? "transparent" : undefined,
       }}
-      events={overlay ? createDisabledEvents() : undefined}
+      events={overlay ? () => createDisabledEvents() : undefined}
     >
       {!overlay && <color attach="background" args={["#050510"]} />}
       {!overlay && <fog attach="fog" args={["#050510", 12, 28]} />}

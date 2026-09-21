@@ -72,7 +72,7 @@ export function Message() {
               onClick={() => setIsLetterOpen((open) => !open)}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="mt-4 rounded-full bg-gradient-to-r from-romantic-500 to-violet-600 px-8 py-4 font-medium text-white shadow-2xl shadow-romantic-500/30 transition hover:shadow-romantic-500/50"
+              className="relative z-20 mt-4 rounded-full bg-gradient-to-r from-romantic-500 to-violet-600 px-8 py-4 font-medium text-white shadow-2xl shadow-romantic-500/30 transition hover:shadow-romantic-500/50"
             >
               {isLetterOpen ? "Close Letter" : relationshipData.letter.cta}
             </motion.button>

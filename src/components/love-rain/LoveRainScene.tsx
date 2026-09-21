@@ -49,7 +49,7 @@ export function LoveRainScene({ scrollProgress, mouse, overlay = false }: LoveRa
 
   return (
     <Canvas
-      className="h-full w-full"
+      className="pointer-events-none h-full w-full"
       dpr={[1, mobile ? 1.15 : 1.5]}
       camera={{ position: [0, 0, 10], fov: 50, near: 0.1, far: 80 }}
       gl={{
@@ -58,7 +58,12 @@ export function LoveRainScene({ scrollProgress, mouse, overlay = false }: LoveRa
         premultipliedAlpha: false,
         powerPreference: "high-performance",
       }}
-      style={overlay ? { background: "transparent" } : undefined}
+      style={{
+        pointerEvents: "none",
+        background: overlay ? "transparent" : undefined,
+      }}
+      eventSource={undefined}
+      eventPrefix="client"
     >
       {!overlay && <color attach="background" args={["#050510"]} />}
       {!overlay && <fog attach="fog" args={["#050510", 12, 28]} />}

@@ -46,7 +46,7 @@ export function LoveRainSection() {
   return (
     <div
       id="love-rain"
-      className="pointer-events-none fixed inset-0 z-[25] overflow-hidden"
+      className="pointer-events-none fixed inset-0 z-[15] overflow-hidden [&_*]:pointer-events-none"
       aria-hidden
     >
       <LoveRainScene scrollProgress={scrollProgress} mouse={mouse} overlay />

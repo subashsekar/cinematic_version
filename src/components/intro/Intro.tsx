@@ -1,9 +1,34 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { withBasePath } from "@/lib/basePath";
 
 export function Intro() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.hash === "#hero") setHidden(true);
+
+    const onHash = () => {
+      if (window.location.hash === "#hero") setHidden(true);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  const enter = () => {
+    setHidden(true);
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}#hero`);
+    }
+  };
+
+  if (hidden) return null;
+
   return (
     <section className="intro-overlay fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[rgb(2,6,23)] to-[rgb(15,23,42)]">
       <div className="pointer-events-none absolute inset-0 opacity-70 [background-image:radial-gradient(circle_at_50%_42%,rgba(236,72,153,0.22),transparent_18%),radial-gradient(circle_at_30%_30%,rgba(139,92,246,0.14),transparent_25%)]" />
@@ -62,8 +87,9 @@ export function Intro() {
         >
           Ready?
         </motion.h3>
-        <motion.a
-          href="#hero"
+        <motion.button
+          type="button"
+          onClick={enter}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.75, duration: 0.6 }}
@@ -72,16 +98,17 @@ export function Intro() {
           className="relative rounded-full border border-romantic-500/40 bg-gradient-to-r from-romantic-500/30 to-violet-500/30 px-8 py-4 font-serif text-lg text-white shadow-lg shadow-romantic-500/20 transition hover:border-romantic-500/80"
         >
           Enter <span aria-hidden="true" className="ml-2">↓</span>
-        </motion.a>
-        <motion.a
-          href="#hero"
+        </motion.button>
+        <motion.button
+          type="button"
+          onClick={enter}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
           className="mt-6 text-sm text-white/50 transition hover:text-white"
         >
           Skip introduction
-        </motion.a>
+        </motion.button>
       </div>
     </section>
   );

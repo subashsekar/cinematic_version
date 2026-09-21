@@ -96,11 +96,11 @@ export function Gallery() {
                   whileHover={{ y: -6, scale: 1.02 }}
                   className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    {item.type === "video" ? (
-                      <video className="h-full w-full object-cover object-center" controls playsInline preload="metadata" src={item.image}>
-                        Your browser does not support this video.
-                      </video>
+                <div className="relative z-20 aspect-[3/4] overflow-hidden">
+                  {item.type === "video" ? (
+                    <video className="relative z-20 h-full w-full object-cover object-center" controls playsInline preload="metadata" src={item.image}>
+                      Your browser does not support this video.
+                    </video>
                     ) : item.type === "audio" ? (
                       <>
                         <img
